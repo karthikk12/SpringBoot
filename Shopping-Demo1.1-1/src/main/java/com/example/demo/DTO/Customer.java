@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
+import com.example.demo.annotations.MyValidEmail;
+
 @Entity
 @Table(name = "customer")
 public class Customer {
@@ -27,6 +29,7 @@ public class Customer {
 	private String lastName;
 
 	@Column(name = "email")
+	@MyValidEmail(message = " *Email format is Invalid must contains .com")
 	private String email;
 
 	@Column(name = "phonenumber")
@@ -35,7 +38,6 @@ public class Customer {
 	public Customer() {
 	}
 
-	
 	public int getCustomerId() {
 		return customerId;
 	}

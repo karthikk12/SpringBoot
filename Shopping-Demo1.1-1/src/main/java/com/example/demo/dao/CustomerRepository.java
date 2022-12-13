@@ -1,5 +1,7 @@
 package com.example.demo.dao;
 
+import javax.transaction.Transactional;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
@@ -16,6 +18,7 @@ public class CustomerRepository {
 
 	private SessionFactory factory = HibernateUtils.getFactoryInstance();
 
+	@Transactional
 	public void saveCustomerDataInRepo(Customer customer, Product product, Employment employment, Payment payment,
 			Proofs proof) {
 

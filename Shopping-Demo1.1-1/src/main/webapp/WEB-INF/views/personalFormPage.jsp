@@ -46,6 +46,8 @@
 
 			<label for="Em"> Email :</label>
 			<form:input path="email" id="Em" />
+			<form:errors path="email" cssClass="errors" />
+			
 			<br>
 			<br>
 
