@@ -26,10 +26,12 @@ public class CardDetailsFormatter implements Formatter<CardDetails> {
 			details.setLastFourDigits("2222");
 
 		}
+		else {
 
-		details.setFirstFourDigits("0000");
-		details.setMiddleFourDigits("1111");
-		details.setLastFourDigits("2222");
+		details.setFirstFourDigits(cardNumber.substring(0, 3));
+		details.setMiddleFourDigits(cardNumber.substring(3, 6));
+		details.setLastFourDigits(cardNumber.substring(6, 9));
+		}
 
 		return details;
 	}

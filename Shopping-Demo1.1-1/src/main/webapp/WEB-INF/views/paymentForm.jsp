@@ -10,6 +10,15 @@
 		alert("Data saved SUccessfully..");
 	}
 </script>
+
+<style type="text/css">
+.errors {
+	color: red;
+	position: fixed;
+	text-align: left;
+	margin-left: 30px;
+}
+</style>
 <head>
 <meta charset="ISO-8859-1">
 <title>Payment</title>
@@ -27,6 +36,7 @@
 
 			<label for="cn"> Card Number :</label>
 			<form:input path="cardNumber" id="cn" />
+			<form:errors path="cardNumber" cssClass="errors"/>
 			<br>
 			<br>
 
