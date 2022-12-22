@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>Exception Page CUstomer..</h1>
+	${exceptionMsg}
 </body>
 </html>
