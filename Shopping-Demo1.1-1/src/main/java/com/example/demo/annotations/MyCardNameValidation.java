@@ -20,7 +20,7 @@ public class MyCardNameValidation implements Validator {
 		CardDetails cardDetails = ((Payment) paymentObj).getCardNumber();
 
 		if (((cardDetails.getFirstFourDigits().length() + cardDetails.getFirstFourDigits().length()
-				+ cardDetails.getFirstFourDigits().length()) < 9)|| cardDetails.getFirstFourDigits().contains("000")) {
+				+ cardDetails.getFirstFourDigits().length()) < 9) || cardDetails.getFirstFourDigits().contains("000")) {
 
 			errors.rejectValue("cardNumber", "102", "Card details message is not correct.");
 
